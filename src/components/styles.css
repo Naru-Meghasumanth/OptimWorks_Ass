@@ -1,0 +1,74 @@
+*{
+    font-family: Tahoma, Verdana, sans-serif;
+}
+
+.btn-div{
+margin-top: 7%;
+display: flex;
+flex-direction: row;
+gap: 50px;
+}
+
+.empty-nav{
+    background-image: linear-gradient(to right, #09203F, #537895) !important;
+    /* background-image: linear-gradient(to left, #0d6efd, #6610f2, #6f42c1) !important; */
+    height: 75px;
+}
+
+.btn-div Button{
+    padding: 10px 20px;
+    font-weight: bold;
+    .d-p{
+        display: block
+    }
+}
+.btn-div Button:hover{
+    font-size: 15px;
+    /* color: #ffffff; */
+    background-color: transparent !important;
+}
+
+.d-p{
+    display: none;
+    font-size: 14px;
+}
+
+.log-text:hover{
+    .d-p{
+        display: block
+    }
+}
+
+.input-field{
+    background-color: transparent !important;
+}
+b{
+    font-size: 25px;
+}
+
+.field{
+    background-color: #ffffff5e !important;
+}
+.form-div{
+    background-color: rgba(0, 139, 139, 0.304) !important;
+    box-shadow: 2px 2px 3px 3px #4d4d4dd5;
+}
+
+/* Nav-styles */
+
+.nav-style{
+    background-image: linear-gradient(to left, #0d6dfd5a, #6710f295, #6e42c19a) !important;
+    box-shadow: 2px 2px 2px 2px rgba(19, 19, 101, 0.33) !important;
+}
+
+.nav-text{
+    color: #fff !important;
+    font-weight: bold !important;
+    font-size: larger !important;
+}
+.nav-logo{
+    color: #fff !important;
+    font-weight: bold !important;
+    font-size: 28px !important;
+}
+

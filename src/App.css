@@ -1,0 +1,48 @@
+*{
+  font-family: Arial Narrow Bold;
+}
+
+.app-body{
+  height: 100vh;
+  background-color: #f2f6f8 !important;
+  /* background-image: linear-gradient(to left, #09203f98, #5378958d, #5378959c) !important; */
+}
+
+.log-height{
+  height: 60vh;
+}
+
+.input-field{
+  width: 300px;
+}
+.margin-btn{
+  margin-right: 15px;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+
+.user-card:hover{
+  color: #f2f6f8;
+  font-size: 18px;
+  background-image: linear-gradient(to left, hsl(216, 98%, 52%, 0.95), hsl(263, 90%, 51%, 0.95), hsl(261, 51%, 51%, 0.95)) !important;
+}
+.user-card:hover{
+  background-color: transparent !important;
+}
+
+
+
+
+
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
