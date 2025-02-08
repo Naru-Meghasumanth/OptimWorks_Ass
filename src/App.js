@@ -131,7 +131,10 @@ function App() {
           <Route path="/cart" element={isLoggedIn ? <Cart cart={cart} removeFromCart={removeFromCart} /> : <LoginPage onLogin={handleLogin} />} />
           <Route path="/checkout" element={isLoggedIn ? <Checkout cart={cart} checkout={checkout} removeFromCart={removeFromCart} /> : <LoginPage onLogin={handleLogin} />} />
           <Route path="/order-history" element={isLoggedIn ? <OrderHistory orders={orders} /> : <LoginPage onLogin={handleLogin} />} />
-          <Route path="/vendordashboard" element={isLoggedIn && isVendor ? <VendorDashboard addProduct={addProduct} sales={sales} /> : <LoginPage onLogin={handleLogin} />} />
+          
+
+          <Route path="/vendordashboard" element={isLoggedIn && isVendor ? <VendorDashboard addProduct={addProduct} sales={sales} products={products} /> : <LoginPage onLogin={handleLogin} />} />
+
         </Routes>
       </Router>
     </div>

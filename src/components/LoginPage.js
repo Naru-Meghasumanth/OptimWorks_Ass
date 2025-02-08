@@ -34,7 +34,7 @@ const LoginPage = ({ onLogin }) => {
         <h1 className='text-light text-center pt-2'>E-Commerce Simulation</h1>
       </div>
       <div className="container d-flex flex-column justify-content-center align-items-center log-height">
-        <div className='text-center mb-5 btn-div log-text'>
+        <div className='text-center mb-2 btn-div log-text'>
           <Button className='btn btn-outline-info bg-dark log-text' onClick={() => setUserType('User')}>User</Button>
           <Button className='btn btn-outline-warning bg-dark' onClick={() => setUserType('Vendor')}>Vendor</Button>
         </div>
@@ -68,6 +68,10 @@ const LoginPage = ({ onLogin }) => {
             Login
           </Button>
         </Form>
+
+        <p className='text-center mt-5'>
+              Pleace select the User r Vendor from above
+        </p>
       </div>
 
 

@@ -12,7 +12,7 @@ const ProductList = ({ products, addToCart }) => {
     <div className="row product-list"> {/* Added class to the row */}
       {products.map((product) => (
         <div className="col-md-4 product-item" key={product.id}> {/* Added classes to the column and item */}
-          <div className="card mb-4 shadow-sm"> {/* shadow-sm class for shadow */}
+          <div className="card mb-4 shadow w-50 m-0"> {/* shadow-sm class for shadow */}
             <img src={product.image} alt={product.title} className="card-img-top product-image" /> {/* Added class for image */}
             <div className="card-body">
               <h5 className="card-title">{product.title}</h5>
