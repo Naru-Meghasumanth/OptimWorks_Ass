@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/OptimWorks_Ass/static/css/main.877bd3ad.css",
+    "main.js": "/OptimWorks_Ass/static/js/main.823f82a2.js",
+    "static/js/453.54e48043.chunk.js": "/OptimWorks_Ass/static/js/453.54e48043.chunk.js",
+    "index.html": "/OptimWorks_Ass/index.html",
+    "main.877bd3ad.css.map": "/OptimWorks_Ass/static/css/main.877bd3ad.css.map",
+    "main.823f82a2.js.map": "/OptimWorks_Ass/static/js/main.823f82a2.js.map",
+    "453.54e48043.chunk.js.map": "/OptimWorks_Ass/static/js/453.54e48043.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.877bd3ad.css",
+    "static/js/main.823f82a2.js"
+  ]
+}
