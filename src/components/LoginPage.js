@@ -8,17 +8,17 @@ const LoginPage = () => {
   const [logdetails, setLogdetails] = useState({ username: '', password: '' });
   const navigate = useNavigate();
 
-  const credentials = { username: 'admin@mysite.com', password: 'admin',
-    staffuser: 'staff@mysite.com', staffpwd: "staff"
+  const credentials = { username: 'sumanth', password: 'sumanth',
+    staffuser: 'sumanth', staffpwd: "vendor"
    };
 
   const submitHandler = (e) => {
     e.preventDefault();
-    if (logdetails.username === credentials.username && logdetails.password === credentials.password && text==='Administration') {
-      navigate('/Dashboard');
+    if (logdetails.username === credentials.username && logdetails.password === credentials.password && text==='User') {
+      navigate('/Product');
     }
-    else if (logdetails.username === credentials.staffuser && logdetails.password === credentials.staffpwd && text === 'Staff') {
-      navigate('/staff')
+    else if (logdetails.username === credentials.staffuser && logdetails.password === credentials.staffpwd && text === 'Vendor') {
+      navigate('/VendorDashboard')
     } 
     else {
       alert("Invalid login credentials or Select the Role ");
@@ -34,9 +34,8 @@ const LoginPage = () => {
     </div>
     <div className="container d-flex flex-column justify-content-center align-items-center log-height">
     <div className='text-center mb-5 btn-div log-text'>
-      <Button className='btn btn-outline-info bg-dark log-text' onClick={()=>setText('Administration')}>Admin</Button>
-       <Button className='btn btn-outline-warning bg-dark' onClick={()=>setText('Staff')}>Staff</Button>
-      {/* <Button className='btn btn-outline-success bg-dark' onClick={()=>setText('User')}>Users</Button> */}
+      <Button className='btn btn-outline-info bg-dark log-text' onClick={()=>setText('User')}>User</Button>
+       <Button className='btn btn-outline-warning bg-dark' onClick={()=>setText('Vendor')}>Vendor</Button>
     </div>
     <h2 className='text-center mb-5 text-dark'>
       {text} Login
@@ -44,7 +43,7 @@ const LoginPage = () => {
     </h2>
       <Form onSubmit={submitHandler} className='bg-light bg-gradient bg-opacity-25 p-4 form-div rounded-3'>
         <Form.Group controlId="formBasicEmail">
-          <Form.Label className='mb-0 text-dark'><b>Username</b></Form.Label>
+          <Form.Label className='mb-0 text-dark'><b>{text} name</b></Form.Label>
           <Form.Control
           className='input-field mb-3 text-dark border-end-0 border-top-0 border-start-0 rounded-top'
             type="text"
