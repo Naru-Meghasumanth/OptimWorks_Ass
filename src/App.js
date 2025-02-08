@@ -9,7 +9,6 @@ import ProductList from './components/ProductList';
 import Cart from './components/Cart';
 import Checkout from './components/Checkout';
 import OrderHistory from './components/OrderHistory';
-import App1 from './App1';
 import VendorDashboard from './components/VendorDashboard';
 
 function App() {
@@ -42,23 +41,20 @@ function App() {
   }, [cart]);
 
   const addProduct = (product) => {
-  console.log('Adding product to state:', product);
-  setProducts([...products, product]);
-};
-
+    setProducts([...products, product]);
+  };
 
   const addToCart = (product) => {
     const existingProduct = cart.find((item) => item.id === product.id);
     if (existingProduct) {
       setCart(cart.map((item) => item.id === product.id ? { ...item, quantity: item.quantity + 1 } : item));
     } else {
-      setCart([...cart, { ...product, quantity: 1 }]);
-    }
+      setCart([...cart, { ...product, quantity: 1 }]);
+    }
   };
-  
 
   const removeFromCart = (title) => {
-    setCart(cart.filter(item => item.title !== title));
+    setCart(cart.filter((item) => item.title !== title));
   };
 
   const checkout = () => {
@@ -68,11 +64,11 @@ function App() {
     }
     const order = {
       orderId: nextOrderId,
-      items: cart.map(item => ({ ...item })),
+      items: cart.map((item) => ({ ...item })),
       timestamp: new Date().toLocaleString()
     };
     setOrders([...orders, order]);
-    cart.forEach(item => {
+    cart.forEach((item) => {
       setSales([...sales, { product: item.title, quantity: item.quantity, timestamp: order.timestamp }]);
     });
     alert("Thank you for your purchase! Order ID: " + order.orderId);
@@ -85,18 +81,8 @@ function App() {
       <AdminProvider>
         <Router>
           <Routes>
-            <Route path="/" element={
-              <div className="">
-                <LoginPage />
-              </div>
-            } />
-            <Route exact path="/App1" element={
-              <div>
-                <h2>Product Catalog</h2>
-                <App1 />
-              </div>
-            } />
-            <Route exact path="/Product" element={
+            <Route path="/" element={<LoginPage />} />
+            <Route path="/Product" element={
               <div>
                 <h2>Product Catalog</h2>
                 <ProductList products={products} addToCart={addToCart} />

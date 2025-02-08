@@ -1,40 +1,57 @@
 import React, { useState } from 'react';
 
 const VendorDashboard = ({ addProduct }) => {
-  const [title, setTitle] = useState('');
-  const [description, setDescription] = useState('');
-  const [price, setPrice] = useState(0);
-  const [image, setImage] = useState('');
+  const [product, setProduct] = useState({
+    title: '',
+    description: '',
+    price: 0,
+    image: '',
+  });
 
-  const handleAddProduct = () => {
-    const newProduct = { title, description, price, image };
-    addProduct(newProduct);
-    setTitle('');
-    setDescription('');
-    setPrice(0);
-    setImage('');
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    addProduct(product);
+    setProduct({
+      title: '',
+      description: '',
+      price: 0,
+      image: '',
+    });
   };
 
   return (
     <div>
-      <form>
-        <div className="form-group">
-          <label>Title:</label>
-          <input type="text" className="form-control" value={title} onChange={(e) => setTitle(e.target.value)} />
-        </div>
-        <div className="form-group">
-          <label>Description:</label>
-          <textarea className="form-control" value={description} onChange={(e) => setDescription(e.target.value)} />
-        </div>
-        <div className="form-group">
-          <label>Price:</label>
-          <input type="number" className="form-control" value={price} onChange={(e) => setPrice(e.target.value)} />
-        </div>
-        <div className="form-group">
-          <label>Image:</label>
-          <input type="text" className="form-control" value={image} onChange={(e) => setImage(e.target.value)} />
-        </div>
-        <button className="btn btn-primary" onClick={handleAddProduct}>Add Product</button>
+      <h2>Vendor Dashboard</h2>
+      <form onSubmit={handleSubmit}>
+        <label>Title:</label>
+        <input
+          type="text"
+          value={product.title}
+          onChange={(e) => setProduct({ ...product, title: e.target.value })}
+        />
+        <br />
+        <label>Description:</label>
+        <input
+          type="text"
+          value={product.description}
+          onChange={(e) => setProduct({ ...product, description: e.target.value })}
+        />
+        <br />
+        <label>Price:</label>
+        <input
+          type="number"
+          value={product.price}
+          onChange={(e) => setProduct({ ...product, price: e.target.value })}
+        />
+        <br />
+        <label>Image:</label>
+        <input
+          type="text"
+          value={product.image}
+          onChange={(e) => setProduct({ ...product, image: e.target.value })}
+        />
+        <br />
+        <button type="submit">Add Product</button>
       </form>
     </div>
   );

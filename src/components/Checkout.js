@@ -6,7 +6,9 @@ const Checkout = ({ cart, checkout }) => {
     <div>
       <h2>Checkout</h2>
       <Cart cart={cart} removeFromCart={() => {}} />
-      <button className="btn btn-success" onClick={checkout}>Checkout</button>
+      <button className="btn btn-success" onClick={checkout}>
+        Checkout
+      </button>
     </div>
   );
 };
