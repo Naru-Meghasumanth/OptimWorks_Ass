@@ -1,5 +1,9 @@
 ### Please to on your local server.
 
+# user name : sumanth password : sumanth
+
+# vendor name : sumanth password: vendor
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
