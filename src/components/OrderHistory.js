@@ -12,16 +12,14 @@ const OrderHistory = ({ orders }) => {
         </tr>
       </thead>
       <tbody>
-        {orders.map((order) =>
-          order.items.map((item, index) => (
-            <tr key={`${order.orderId}-${index}`}>
-              <td>{order.orderId}</td>
-              <td>{item.title}</td>
-              <td>${item.price}</td>
-              <td>{order.timestamp}</td>
-            </tr>
-          ))
-        )}
+        {orders.map(order => order.items.map((item, index) => (
+          <tr key={`${order.orderId}-${index}`}> {/* Template literal for key */}
+            <td>{order.orderId}</td>
+            <td>{item.title}</td>
+            <td>${item.price}</td>
+            <td>{order.timestamp}</td>
+          </tr>
+        )))}
       </tbody>
     </table>
   );

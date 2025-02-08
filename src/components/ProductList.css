@@ -1,0 +1,40 @@
+.product-list {
+    display: flex; /* Ensure items are arranged in a row */
+    flex-wrap: wrap; /* Allow items to wrap to the next line */
+  }
+  
+  .product-item {
+    display: flex; /* Use flexbox for the card container */
+    flex-direction: column; /* Arrange card content vertically */
+    height: 100%; /* Make all items the same height */
+    padding: 10px; /* Add some padding around the items */
+  }
+  
+  .product-image {
+    object-fit: cover; /* Maintain aspect ratio and cover the entire area */
+    height: 200px; /* Set a fixed height for the image */
+    width: 60%;
+  }
+  
+  .card {
+      height: 100%;
+  }
+  
+  .card-body {
+    flex-grow: 1; /* Allow the card body to expand to fill available space */
+    display: flex;
+    flex-direction: column;
+  
+  }
+  
+  .card-title {
+      margin-bottom: 0.5rem; /* Add spacing between title and description */
+  }
+  
+  .card-text {
+      flex-grow: 1; /* Allow description to take up available space */
+  }
+  
+  .shadow-sm { /* Existing Bootstrap class - ensure it's included */
+    box-shadow: 0 .125rem .25rem rgba(0,0,0,.075)!important;
+  }

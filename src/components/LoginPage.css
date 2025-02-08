@@ -1,0 +1,70 @@
+.login-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Ensure full viewport height */
+    background-color: #f0f0f0; /* Example background color */
+    background-image: url('your-background-image.jpg'); /* Optional background image */
+    background-size: cover;
+    background-position: center;
+  }
+  
+  .login-container {
+    background-color: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 400px; /* Adjust width as needed */
+    text-align: center; /* Center the content */
+  }
+  
+  .login-header {
+    margin-bottom: 20px;
+  }
+  
+  .login-form-container {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .role-buttons {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px; /* Add spacing below buttons */
+  }
+  
+  .login-title {
+    margin-bottom: 20px;
+    color: #343a40; /* Darker color for the title */
+  }
+  
+  
+  .login-form {
+    display: flex;
+    flex-direction: column; /* Ensure form elements stack vertically */
+  }
+  
+  .login-form .form-group {
+    margin-bottom: 15px; /* Add spacing between form groups */
+  }
+  
+  .login-form .form-label {
+    font-weight: 500;
+    color: #343a40; /* Darker color for labels */
+  }
+  
+  .login-form .form-control {
+    border-radius: 4px;
+    padding: 10px;
+    border: 1px solid #ced4da; /* Light gray border */
+  }
+  
+  .login-form .btn-primary {
+    background-color: #007bff; /* Primary blue color */
+    border-color: #007bff;
+  }
+  
+  .login-form .btn-primary:hover {
+    background-color: #0069d9;
+    border-color: #0062cc;
+  }

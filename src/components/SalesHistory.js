@@ -11,8 +11,8 @@ const SalesHistory = ({ sales }) => {
         </tr>
       </thead>
       <tbody>
-        {sales.map((sale) => (
-          <tr key={sale.product}>
+        {sales.map((sale, index) => (
+          <tr key={index}>
             <td>{sale.product}</td>
             <td>{sale.quantity}</td>
             <td>{sale.timestamp}</td>

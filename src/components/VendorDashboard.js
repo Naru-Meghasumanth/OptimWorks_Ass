@@ -1,58 +1,53 @@
 import React, { useState } from 'react';
+import SalesHistory from './SalesHistory';
 
-const VendorDashboard = ({ addProduct }) => {
-  const [product, setProduct] = useState({
+const VendorDashboard = ({ addProduct, sales }) => { // Added sales prop
+  const [newProduct, setNewProduct] = useState({
     title: '',
     description: '',
     price: 0,
-    image: '',
+    image: ''
   });
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    addProduct(product);
-    setProduct({
+  const handleInputChange = (e) => {
+    setNewProduct({ ...newProduct, [e.target.name]: e.target.value });
+  };
+
+  const handleAddProduct = () => {
+    addProduct(newProduct);
+    setNewProduct({  // Clear the form after adding
       title: '',
       description: '',
       price: 0,
-      image: '',
+      image: ''
     });
   };
 
   return (
     <div>
-      <h2>Vendor Dashboard</h2>
-      <form onSubmit={handleSubmit}>
-        <label>Title:</label>
-        <input
-          type="text"
-          value={product.title}
-          onChange={(e) => setProduct({ ...product, title: e.target.value })}
-        />
-        <br />
-        <label>Description:</label>
-        <input
-          type="text"
-          value={product.description}
-          onChange={(e) => setProduct({ ...product, description: e.target.value })}
-        />
-        <br />
-        <label>Price:</label>
-        <input
-          type="number"
-          value={product.price}
-          onChange={(e) => setProduct({ ...product, price: e.target.value })}
-        />
-        <br />
-        <label>Image:</label>
-        <input
-          type="text"
-          value={product.image}
-          onChange={(e) => setProduct({ ...product, image: e.target.value })}
-        />
-        <br />
-        <button type="submit">Add Product</button>
+      <h2>Add Product</h2>
+      <form>
+        <div className="form-group">
+          <label>Title:</label>
+          <input type="text" className="form-control" name="title" value={newProduct.title} onChange={handleInputChange} required />
+        </div>
+        <div className="form-group">
+          <label>Description:</label>
+          <textarea className="form-control" name="description" value={newProduct.description} onChange={handleInputChange} required />
+        </div>
+        <div className="form-group">
+          <label>Price:</label>
+          <input type="number" className="form-control" name="price" value={newProduct.price} onChange={handleInputChange} required />
+        </div>
+        <div className="form-group">
+          <label>Image URL:</label>
+          <input type="text" className="form-control" name="image" value={newProduct.image} onChange={handleInputChange}  /> {/* Not required, could be optional */}
+        </div>
+        <button type="button" className="btn btn-primary" onClick={handleAddProduct}>Add Product</button>
       </form>
+
+      <h2 className="mt-4">Sales History</h2> {/* Display sales history on vendor dashboard */}
+      <SalesHistory sales={sales} />
     </div>
   );
 };
