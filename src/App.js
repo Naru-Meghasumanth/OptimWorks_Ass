@@ -126,7 +126,7 @@ function App() {
         </div>
 
         <Routes>
-          <Route path="/" element={<LoginPage onLogin={handleLogin} />} />
+          <Route path="/OptimWorks_Ass" element={<LoginPage onLogin={handleLogin} />} />
           <Route path="/product" element={isLoggedIn ? <ProductList products={products} addToCart={addToCart} /> : <LoginPage onLogin={handleLogin} />} />
           <Route path="/cart" element={isLoggedIn ? <Cart cart={cart} removeFromCart={removeFromCart} /> : <LoginPage onLogin={handleLogin} />} />
           <Route path="/checkout" element={isLoggedIn ? <Checkout cart={cart} checkout={checkout} removeFromCart={removeFromCart} /> : <LoginPage onLogin={handleLogin} />} />
